@@ -98,8 +98,8 @@ public class RxTxComm implements SerialPortEventListener {
 				String inputLine=input.readLine();
 				space = inputLine.indexOf(' ');
 				System.out.println(inputLine);
-				MashtunMain.tempF = inputLine.substring(0, space);
-				MashtunMain.tempC = inputLine.substring(space+1);;
+				MashtunMain.tempF = (inputLine.substring(0, space)).trim();
+				MashtunMain.tempC = (inputLine.substring(space+1)).trim();
 			} catch (Exception e) {
 				System.err.println(e.toString());
 			}

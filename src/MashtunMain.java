@@ -66,7 +66,7 @@ public class MashtunMain extends RxTxComm {
 		JLabel temperature_lbl = new JLabel("Current Temperature");
 		// °F
 		fahrenheit_lbl = new JLabel("Fahrenheit");
-		fahrenheit_lbl.setHorizontalAlignment(SwingConstants.CENTER);
+		fahrenheit_lbl.setHorizontalAlignment(SwingConstants.LEFT);
 		fahrenheit_lbl.setBounds(25, 53, 112, 16);
 		frame.getContentPane().add(fahrenheit_lbl);
 		fahrenheit_TextField = new JTextField();
@@ -81,7 +81,7 @@ public class MashtunMain extends RxTxComm {
 
 		// °C
 		celcisus_lbl = new JLabel("Celsius");
-		celcisus_lbl.setHorizontalAlignment(SwingConstants.CENTER);
+		celcisus_lbl.setHorizontalAlignment(SwingConstants.LEFT);
 		celcisus_lbl.setBounds(149, 53, 112, 16);
 		frame.getContentPane().add(celcisus_lbl);
 		celsius_TextField = new JTextField();
@@ -101,8 +101,8 @@ public class MashtunMain extends RxTxComm {
 		@Override
 		public void actionPerformed(ActionEvent event) {
 			if ( tempF != null && tempC != null ) {
-			fahrenheit_TextField.setText(tempF);
-			celsius_TextField.setText(tempC);
+			fahrenheit_TextField.setText(tempF + "°F");
+			celsius_TextField.setText(tempC + "°C");
 			}
 			else {
 				fahrenheit_TextField.setText("Not detected");
